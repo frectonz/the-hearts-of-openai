@@ -190,6 +190,7 @@ update msg model =
                 , decodeOutput =
                     newInput
                         |> String.split " "
+                        |> List.map (String.replace "❤️" "🤎")
                         |> List.map String.toList
                         |> List.map (List.map toInt)
                         |> List.map toBase10
