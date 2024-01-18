@@ -178,6 +178,7 @@ update msg model =
                         |> bytesToList
                         |> List.map toBase8
                         |> List.map (String.map fromInt)
+                        |> List.map (String.replace "🤎" "❤️")
                         |> String.join " "
               }
             , Cmd.none
@@ -194,7 +195,7 @@ update msg model =
                         |> List.map toBase10
                         |> List.map (\x -> encode (Encode.unsignedInt8 x))
                         |> List.map (\x -> decode (Decode.string 1) x)
-                        |> List.map (Maybe.withDefault "-")
+                        |> List.map (Maybe.withDefault " ")
                         |> List.reverse
                         |> String.join ""
               }
