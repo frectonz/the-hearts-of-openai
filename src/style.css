@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10rem;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
