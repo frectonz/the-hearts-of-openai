@@ -4,7 +4,7 @@
 }
 
 body {
-  padding: 10rem;
+  padding: 2rem;
   height: 100vh;
   display: grid;
   grid-template-rows: repeat(2, 1fr);

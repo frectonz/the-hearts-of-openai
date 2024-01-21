@@ -5,7 +5,7 @@ import Bytes exposing (Bytes)
 import Bytes.Decode as Decode exposing (Step(..), decode)
 import Bytes.Encode as Encode exposing (encode)
 import Html exposing (section, text, textarea)
-import Html.Attributes exposing (disabled)
+import Html.Attributes exposing (disabled, placeholder)
 import Html.Events exposing (onInput)
 
 
@@ -209,11 +209,11 @@ view model =
     { title = "Hearts of OpenAi"
     , body =
         [ section []
-            [ textarea [ onInput NewEncodeInput ] [ text model.encodeInput ]
+            [ textarea [ placeholder "message to be encoded", onInput NewEncodeInput ] [ text model.encodeInput ]
             , textarea [ disabled True ] [ text model.encodeOutput ]
             ]
         , section []
-            [ textarea [ onInput NewDecodeInput ] [ text model.decodeInput ]
+            [ textarea [ placeholder "message to be decoded", onInput NewDecodeInput ] [ text model.decodeInput ]
             , textarea [ disabled True ] [ text model.decodeOutput ]
             ]
         ]
